@@ -1,2 +1,2 @@
-# loaders
-loading components implementing scss animations
+# Loaders
+Loading components implementing scss animations
