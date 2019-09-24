@@ -1,0 +1,71 @@
+//Variables:
+  $primary: #004175;
+  $light-blue: rgb(84, 147, 210);
+//.........//
+
+.spinner-custom {
+	background: transparent;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 0px auto;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: 5px solid lighten($light-blue, 25%);
+	border-top: 5px solid $light-blue;
+  position: relative;
+  animation: rotate-s-loader infinite 1s linear;
+}
+
+.spinner-container {
+  margin: auto;
+	display: flex;
+	flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.spinner-para {
+	display: flex;
+  flex-direction: row;
+	p {
+    font-size: 1.7rem;
+    color: $primary;
+    position: relative;
+  }
+  .animate-p {
+    margin-left: 10px;
+    animation: lift-letter infinite 2s cubic-bezier(0.75, 0.25, 0.27, 0.81);
+  }
+  .animate-x {
+    animation: lift-letter infinite 2s cubic-bezier(0.75, 0.25, 0.27, 0.81);
+    animation-delay: 300ms;
+  }
+  .animate-y {
+    animation: lift-letter infinite 2s  cubic-bezier(0.75, 0.25, 0.27, 0.81);
+    animation-delay: 600ms;
+  }
+}
+
+@keyframes rotate-s-loader {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes lift-letter {
+  0% {
+    transform: translateY(0px);
+  }
+	50% {
+    transform: translateY(-10px);
+	}
+	100% {
+    transform: translateY(0px);
+	}
+}
