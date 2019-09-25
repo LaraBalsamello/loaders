@@ -1,5 +1,8 @@
 # Loaders
-Loading components implementing scss animations
+Loading components Examples.
 available routes:
                 - /skeleton-loading,
                 - /common-loading
+
+Develop with ANGULAR.
+Animations using scss.
