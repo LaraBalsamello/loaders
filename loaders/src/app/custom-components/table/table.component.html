@@ -1,0 +1,12 @@
+<table class="table-container">
+    <thead>
+      <tr>
+        <th *ngFor="let object of objectTD[0]">{{ object.title }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let map of objectTD">
+        <td *ngFor="let summary of map" [attr.data-label]="summary.title">{{ summary.value }}</td>
+      </tr>
+    </tbody>
+  </table>

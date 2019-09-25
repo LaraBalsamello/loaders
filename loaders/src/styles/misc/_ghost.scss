@@ -1,0 +1,40 @@
+@import "../misc/var";
+
+.ghost:empty {
+  display: flex;
+  animation: loading 2s infinite ease-in;
+  background: $darken;
+  opacity: 0.1;
+}
+
+.ghost:empty {
+  p{
+    display: flex;
+    animation: loading 2s infinite ease-in;
+    background: $darken;
+    opacity: 0.1;
+  }
+}
+
+.ghost:empty {
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+}
+
+p:empty.lead {
+  height: 30px;
+  width: 200px;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

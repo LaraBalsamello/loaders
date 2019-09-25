@@ -1,0 +1,10 @@
+@mixin hyperLink($font-color, $t-decor) {
+    font-size: 16px;
+    color: $font-color;
+    text-decoration: $t-decor;
+    cursor: pointer;
+    &:hover {
+      transition: color 0.5s ease-in-out;
+      color: darken($font-color, 15%);
+    }
+}

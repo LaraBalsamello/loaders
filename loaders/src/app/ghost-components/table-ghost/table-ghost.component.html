@@ -1,0 +1,19 @@
+<table class="table-container table-ghost">
+  <thead>
+    <tr>
+      <th *ngFor="let i of iterationCountTH">
+        <p class="ghost"></p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of iterationCountTBTR">
+      <td *ngFor="let i of iterationCountTBTD" [attr.data-label]="iterationCountTBTD">
+        <p class="ghost"></p>
+      </td>
+      <td>
+        <p class="ghost"></p>
+      </td>
+    </tr>
+  </tbody>
+</table>

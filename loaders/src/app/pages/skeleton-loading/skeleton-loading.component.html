@@ -1,0 +1,38 @@
+
+<div class="paragraph-container">
+  <h1>Showing Skeleton Loading</h1>
+
+  <!--- GHOST ELEMENTS FOR SKELETON LOADING --->
+  <div *ngIf="lorem==undefined">
+    <div class="container-ghost ghost" *ngFor="let i of [1,2,3,4,5,6,7]">
+      <p  class="ghost"></p>
+    </div>
+  </div>
+  <!------------------------------------------->
+
+  <!--- GHOST ELEMENTS FOR SKELETON LOADING --->
+  <div *ngIf="lorem==undefined" class="margin-t">
+    <div class="container-ghost ghost" *ngFor="let i of [1,2,3,4,5,6,7]">
+      <p  class="ghost"></p>
+    </div>
+  </div>
+  <!------------------------------------------->
+
+  <p *ngIf="lorem!==undefined">
+    {{lorem}}
+  </p>
+  <p *ngIf="lorem!==undefined">
+    {{ipsum}}
+  </p>
+</div>
+  <div>
+    <app-table *ngIf="objectTD.length!==0" [objectTD]="objectTD"></app-table>
+
+  <!--- GHOST ELEMENTS FOR SKELETON LOADING --->
+    <app-table-ghost *ngIf="objectTD.length == 0"
+    [iterationCountTBTD]="[1, 2, 3]"
+    [iterationCountTBTR]="[1, 2, 3, 4, 5, 6 ]"
+    [iterationCountTH]="[1, 2, 3, 4]"></app-table-ghost>
+  <!------------------------------------------->
+
+  </div>

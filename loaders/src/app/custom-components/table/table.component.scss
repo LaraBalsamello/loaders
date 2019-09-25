@@ -1,0 +1,66 @@
+@import "../../../styles/various";
+
+.table-container {
+  border-top: 2px solid $light-grey;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  a {
+    @include hyperLink($light-blue, $t-under);
+  }
+
+  th,
+  td {
+    padding: 1rem;
+    border-bottom: 1px solid $light-grey;
+  }
+  thead {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  tbody {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  table {
+    border: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 2px solid $light-grey;
+    &:nth-child(1) {
+      border-top: none;
+    }
+  }
+
+  table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    border-bottom: 1px dotted $light-grey;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    max-width: 40%;
+    padding-right: 0.625rem;
+    text-align: left;
+  }
+}
